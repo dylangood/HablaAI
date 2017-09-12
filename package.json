@@ -1,0 +1,15 @@
+{
+  "name": "hablaai",
+  "version": "1.0.0",
+  "description": "a simple TODO list app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server/index.js"
+  },
+  "author": "Dylan Gould",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.15.4"
+  }
+}
