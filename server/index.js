@@ -8,8 +8,8 @@ app = express();
 
 app.use(bodyParser.json());
 
-app.use(express.static(path.join(__dirname, '../client/')));
-// app.use(express.static(path.join(__dirname, '../db/')));
+app.use(express.static(path.join(__dirname, '../client')));
+// app.use(express.static(path.join(__dirname, '../db')));
 
 app.get('/', (req, res) => {
   res.status(200).sendFile(path.join(__dirname, '../client', 'index.html'));
@@ -20,7 +20,6 @@ app.get('/api/todos', (req, res) => {
 });
 
 app.get('/api/todos/search', (req, res) => {
-  console.log(req.query);
   if (req.query.name) {
     var queriedTodos = todos.filter( item => {
       return item.todo.includes(req.query.name);
