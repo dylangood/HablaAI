@@ -8,8 +8,8 @@ class Search extends React.Component {
   render() {
     return (
       <div>
-        <input></input>
-        <button>Search To-Do's</button>
+        <input onChange={this.props.handleChange} ></input>
+        <button onClick={this.props.handleClick} >Search To-Do's</button>
       </div>
     );
   }
